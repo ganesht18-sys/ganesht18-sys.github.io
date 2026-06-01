@@ -141,9 +141,9 @@
   @media(max-width:640px){.principles{grid-template-columns:1fr}}
 
   /* CERTS */
-  /*.chips{display:flex;flex-wrap:wrap;gap:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:12px}
   .chip{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:12px 18px;font-weight:600;color:var(--ink);font-size:.92rem}
-  .chip small{display:block;color:var(--muted);font-weight:500;font-size:.78rem;margin-top:2px}*/
+  .chip small{display:block;color:var(--muted);font-weight:500;font-size:.78rem;margin-top:2px}
 
   /* CONTACT band */
   #contact{background:var(--accent-d);color:#eafaf6;max-width:none;border-bottom:0}
@@ -195,7 +195,7 @@
     <div class="stats">
       <div class="s"><div class="num">14+</div><div class="lbl">Years in enterprise delivery &amp; engineering</div></div>
       <div class="s"><div class="num">6</div><div class="lbl">Cloud-transformation apps delivered</div></div>
-      <div class="s"><div class="num">35</div><div class="lbl">Onshore/offshore team led</div></div>
+      <div class="s"><div class="num">30</div><div class="lbl">Onshore/offshore team led</div></div>
       <div class="s"><div class="num">Fortune&nbsp;50</div><div class="lbl">Consumer-goods client program</div></div>
     </div>
 
@@ -260,7 +260,7 @@
         <div class="row"><b>Problem</b><span>A legacy document-imaging platform was hard to scale, with content locked in CAS and fragmented user interfaces for retrieval, workflow, upload, and reporting.</span></div>
         <div class="row"><b>Approach</b><span>Led a "build once, roll out many" modernization: rewrote the UI in Angular JS, converted gateways into RESTful APIs, and onboarded the platform to Azure with a load-balanced, fault-tolerant design.</span></div>
         <div class="row"><b>Architecture</b><span>Azure Blob, Azure IIS &amp; Windows Server, Azure Functions, App Gateway, Azure DevOps; C#/.NET REST APIs for metadata extraction, indexing, archival, and SAP payment posting.</span></div>
-        <div class="row"><b>Outcome</b><span>Delivered 6 cloud-transformation applications on time; unified four interfaces into one integrated UI; 0 critical incidents at cutover.</span></div>
+        <div class="row"><b>Outcome</b><span>Delivered [6] cloud-transformation applications on time; unified four interfaces into one integrated UI; 0 critical incidents at cutover.</span></div>
         <div class="row"><b>Business impact</b><span>Secured and accelerated P2P/O2C document operations across regions; reduced manual processing effort by ~41%; improved CSAT and cut recurring incidents by ~13%.</span></div>
         <div class="tags"><span>Azure</span><span>Cloud Migration</span><span>REST APIs</span><span>P2P / O2C</span><span>SAP Integration</span><span>.NET / C#</span></div>
       </div>
@@ -271,7 +271,7 @@
         <div class="row"><b>Problem</b><span>Data discrepancies across SQL Server, SAP, Teradata, and Informatica threatened the reliability of downstream enterprise reporting.</span></div>
         <div class="row"><b>Approach</b><span>Built scorecards comparing data across sources by rule-based parameters, with scheduled refreshes and automated discrepancy alerts via email.</span></div>
         <div class="row"><b>Architecture</b><span>ETL via SSIS &amp; DIH; SQL-based verification, conversion, and audit-sync reports; scheduled jobs for continuous data-quality monitoring.</span></div>
-        <div class="row"><b>Outcome</b><span>Improved data quality by 22%; faster discrepancy detection and resolution across downstream teams.</span></div>
+        <div class="row"><b>Outcome</b><span>Improved data quality by [X%]; faster discrepancy detection and resolution across downstream teams.</span></div>
         <div class="row"><b>Business impact</b><span>More trustworthy reporting and the data-governance foundation now essential for enterprise pipelines.</span></div>
         <div class="tags"><span>Data Quality</span><span>ETL / SSIS</span><span>SQL</span><span>SAP</span><span>Teradata</span><span>Governance</span></div>
       </div>
@@ -300,14 +300,14 @@
       </div>
     </section>
 
-    <!--<section class="block" id="certs">
+    <section class="block" id="certs">
       <div class="kicker">Credentials</div>
       <h2 class="t">Certifications &amp; Credentials</h2>
       <p class="lead">Current and in-progress credentials backing delivery, cloud, and AI expertise. (Update as you earn them.)</p>
       <div class="chips">
         <div class="chip">B.Tech, Information Technology<small>Jeppiaar Engineering College, 2011</small></div>
       </div>
-    </section>-->
+    </section>
 
     <section class="block" id="contact">
       <div class="kicker" style="color:#7fd1c4">Contact</div>
@@ -327,11 +327,42 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
-  // Resume links point to a PDF you place next to this file named "Ganesh_Thangappa_Resume_v2.pdf"
-  ['resumeLink','resumeLink2','resumeLink3'].forEach(function(id){
-    var el=document.getElementById(id);
-    if(el){el.setAttribute('href','Ganesh_Thangappa_Resume_v2.pdf');el.setAttribute('target','_blank');}
-  });
+
+  // Résumé auto-detect:
+  // Upload versioned résumés named  Ganesh_Thangappa_Resume_v1.pdf, _v2.pdf, _v3.pdf, ...
+  // The site automatically links to the HIGHEST version number it can find.
+  // If no versioned file exists, it falls back to "Ganesh-Thangappa-Resume.pdf".
+  (function () {
+    var BASE = 'Ganesh_Thangappa_Resume_v';   // naming convention prefix
+    var MAX_VERSION = 30;                       // highest version number to probe
+    var FALLBACK = 'Ganesh-Thangappa-Resume.pdf';
+
+    function setResume(href) {
+      ['resumeLink', 'resumeLink2', 'resumeLink3'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.setAttribute('href', href);
+          el.setAttribute('target', '_blank');
+          el.setAttribute('rel', 'noopener');
+        }
+      });
+    }
+
+    // Point to the fallback immediately so the button always works,
+    // then upgrade to the latest version once detection completes.
+    setResume(FALLBACK);
+
+    (async function detectLatest() {
+      for (var n = MAX_VERSION; n >= 1; n--) {
+        var url = BASE + n + '.pdf';
+        try {
+          var res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+          if (res.ok) { setResume(url); return; }
+        } catch (e) { /* ignore network/404 and keep probing */ }
+      }
+      // none found -> fallback already set
+    })();
+  })();
 </script>
 </body>
 </html>
