@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ganesh Thangappa — Delivery Leadership · Cloud · Enterprise AI</title>
+<meta name="description" content="Ganesh Thangappa — Service Delivery & Program Manager with 14+ years driving enterprise cloud and AI transformation. Delivery leadership, GenAI architecture, enterprise system design, and production-grade AI builds." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ganesht18-sys.github.io/" />
+<meta property="og:title" content="Ganesh Thangappa — Delivery Leadership · Cloud · Enterprise AI" />
+<meta property="og:description" content="Service Delivery & Program Manager. 14+ years driving enterprise cloud and AI transformation — case studies, production-grade AI builds, and résumé." />
+<meta property="og:image" content="https://ganesht18-sys.github.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ganesh Thangappa — Delivery Leadership · Cloud · Enterprise AI" />
+<meta name="twitter:description" content="Service Delivery & Program Manager. 14+ years driving enterprise cloud and AI transformation." />
+<meta name="twitter:image" content="https://ganesht18-sys.github.io/og-image.png" />
+
+<style>
+  :root{
+    --ink:#1b1c1e; --muted:#6c6962; --faint:#928d84; --line:#e6e1d8;
+    --paper:#f7f4ee; --card:#fffdf9; --accent:#0f6e63; --accent-d:#0a4d45;
+    --gold:#9a6b1f; --sidebar:#15201f;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+
+  /* LAYOUT: fixed sidebar + scrolling main */
+  .shell{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+  .sidebar{position:sticky;top:0;align-self:start;height:100vh;background:var(--sidebar);color:#e9e6df;padding:48px 36px;display:flex;flex-direction:column}
+  .main{padding:0}
+  @media(max-width:900px){
+    .shell{grid-template-columns:1fr}
+    .sidebar{position:static;height:auto;padding:34px 24px}
+  }
+
+  /* SIDEBAR */
+  .brand{font-family:var(--serif);font-size:1.7rem;line-height:1.15;color:#fff;margin-bottom:6px}
+  .brand span{color:#7fd1c4}
+  .role-eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb8b1;font-weight:700;margin-bottom:22px}
+  .side-tag{font-size:.92rem;color:#b9c4c1;margin-bottom:30px}
+  .side-nav{display:flex;flex-direction:column;gap:2px;margin-bottom:auto}
+  .side-nav a{color:#cdd6d3;font-size:.95rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px}
+  .side-nav a:hover{color:#fff;padding-left:6px;transition:.18s}
+  .side-nav a::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.7}
+  .side-contact{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+  .side-contact a{display:block;text-align:center;font-size:.88rem;font-weight:600;padding:11px 14px;border-radius:8px}
+  .sc-primary{background:#7fd1c4;color:#0c2925}
+  .sc-primary:hover{background:#9be0d4}
+  .sc-ghost{border:1px solid rgba(255,255,255,.28);color:#e9e6df}
+  .sc-ghost:hover{background:rgba(255,255,255,.1)}
+  @media(max-width:900px){.side-nav{display:none}}
+
+  /* MAIN SECTIONS */
+  .block{padding:72px 64px;border-bottom:1px solid var(--line);max-width:920px}
+  @media(max-width:900px){.block{padding:48px 24px}}
+  .kicker{font-family:var(--serif);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
+  h2.t{font-family:var(--serif);font-size:2.1rem;color:var(--ink);line-height:1.2;margin-bottom:10px}
+  .lead{color:var(--muted);font-size:1.05rem;max-width:680px;margin-bottom:30px}
+  p.body{color:var(--ink);max-width:720px;margin-bottom:16px}
+
+  /* HERO */
+  .hero{padding:90px 64px 64px;border-bottom:2px solid var(--ink);max-width:920px}
+  .hero h1{font-family:var(--serif);font-size:3rem;line-height:1.12;letter-spacing:-.01em;margin:14px 0 20px;max-width:760px}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero .tag{font-size:1.18rem;color:var(--muted);max-width:620px;margin-bottom:32px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:8px;font-weight:600;font-size:.95rem;transition:.2s}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-d)}
+  .btn-line{border:1px solid var(--ink);color:var(--ink)}
+  .btn-line:hover{background:var(--ink);color:#fff}
+  @media(max-width:900px){.hero{padding:54px 24px}.hero h1{font-size:2.2rem}}
+  /* stat band */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+  .stats .s{padding:22px 18px 6px;border-right:1px solid var(--line)}
+  .stats .s:last-child{border-right:0}
+  .stats .num{font-family:var(--serif);font-size:1.9rem;color:var(--accent);line-height:1}
+  .stats .lbl{font-size:.82rem;color:var(--muted);margin-top:8px}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.stats .s:nth-child(2){border-right:0}}
+
+  /* ABOUT callout */
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:22px 26px;max-width:720px;margin:6px 0 22px}
+  .callout .ttl{font-weight:700;color:var(--ink);margin-bottom:10px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+  .callout ul{margin:0 0 0 18px}
+  .callout li{margin-bottom:9px;color:var(--ink)}
+  .callout li:last-child{margin-bottom:0}
+  p.body b, .callout b{color:var(--accent-d)}
+
+  /* EXPERTISE numbered rows */
+  .xrow{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+  .xrow:last-child{border-bottom:1px solid var(--line)}
+  .xnum{font-family:var(--serif);font-size:1.7rem;color:var(--gold)}
+  .xrow h3{font-size:1.15rem;color:var(--ink);margin-bottom:6px}
+  .xrow p{color:var(--muted);font-size:.96rem;max-width:640px}
+
+  /* TIMELINE two-column */
+  .trow{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+  .trow:last-child{border-bottom:1px solid var(--line)}
+  .tyr{font-size:.82rem;font-weight:700;letter-spacing:.05em;color:var(--accent);padding-top:3px}
+  .trow h4{font-size:1.05rem;color:var(--ink);margin-bottom:5px}
+  .trow p{color:var(--muted);font-size:.94rem}
+  @media(max-width:640px){.trow,.xrow{grid-template-columns:1fr;gap:8px}}
+
+  /* AI services */
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+  .ai-cell{padding:24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ai-cell:nth-child(2n){border-right:0}
+  .ai-cell:nth-last-child(-n+2){border-bottom:0}
+  .ai-cell h4{color:var(--ink);font-size:1.05rem;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+  .ai-cell h4::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+  .ai-cell p{color:var(--muted);font-size:.93rem}
+  @media(max-width:640px){.ai-grid{grid-template-columns:1fr}.ai-cell{border-right:0}.ai-cell:nth-last-child(2){border-bottom:1px solid var(--line)}}
+
+  /* PORTFOLIO */
+  .case{border-top:2px solid var(--ink);padding:26px 0 30px}
+  .case h3{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:4px}
+  .case .role{font-size:.78rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+  .case .row{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:10px 0;border-top:1px solid var(--line);font-size:.96rem}
+  .case .row b{color:var(--accent-d);font-variant:small-caps;letter-spacing:.04em}
+  .case .row span{color:var(--ink)}
+  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .tags span{border:1px solid var(--accent);color:var(--accent-d);font-size:.76rem;font-weight:600;padding:4px 12px;border-radius:4px}
+  @media(max-width:640px){.case .row{grid-template-columns:1fr;gap:2px}}
+
+  /* AI BUILDS (engineering lab) */
+  .lab-note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 22px;max-width:720px;margin:0 0 26px;font-size:.95rem;color:var(--ink)}
+  .ghlink{display:inline-block;margin-top:14px;font-weight:700;font-size:.88rem;color:var(--accent-d);border-bottom:2px solid var(--accent);padding-bottom:2px}
+  .ghlink:hover{color:var(--accent)}
+
+  /* PHILOSOPHY */
+  .pull{font-family:var(--serif);font-size:1.7rem;line-height:1.45;color:var(--ink);max-width:760px;font-style:italic;border-left:3px solid var(--gold);padding-left:24px;margin-bottom:30px}
+  .pull .hl{color:var(--accent);font-style:normal;font-weight:700}
+  .principles{display:grid;grid-template-columns:1fr 1fr;gap:24px;counter-reset:p}
+  .principles div{counter-increment:p}
+  .principles div::before{content:counter(p,decimal-leading-zero);font-family:var(--serif);color:var(--gold);font-size:1.1rem;display:block;margin-bottom:4px}
+  .principles b{color:var(--ink);display:block;margin-bottom:3px}
+  .principles p{color:var(--muted);font-size:.93rem}
+  @media(max-width:640px){.principles{grid-template-columns:1fr}}
+
+  /* CERTS */
+  .chips{display:flex;flex-wrap:wrap;gap:12px}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:12px 18px;font-weight:600;color:var(--ink);font-size:.92rem}
+  .chip small{display:block;color:var(--muted);font-weight:500;font-size:.78rem;margin-top:2px}
+
+  /* CONTACT band */
+  #contact{background:var(--accent-d);color:#eafaf6;max-width:none;border-bottom:0}
+  #contact h2{color:#fff}
+  #contact .lead{color:#bfe6df}
+  #contact .cta{display:flex;gap:14px;flex-wrap:wrap}
+  #contact .btn-primary{background:#fff;color:var(--accent-d)}
+  #contact .btn-primary:hover{background:#e8fff9}
+  #contact .btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+  #contact .btn-line:hover{background:rgba(255,255,255,.12);color:#fff}
+
+  footer{background:var(--sidebar);color:#8fa39e;padding:24px 64px;font-size:.85rem}
+  @media(max-width:900px){footer{padding:22px 24px}}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="brand">Ganesh <span>Thangappa</span></div>
+    <div class="role-eyebrow">Delivery Leadership · Cloud · Enterprise AI</div>
+    <p class="side-tag">Service Delivery &amp; Program Manager turning ambitious technology agendas into delivered outcomes.</p>
+    <nav class="side-nav">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#timeline">Career</a>
+      <a href="#ai">AI Services</a>
+      <a href="#builds">AI Builds</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="side-contact">
+      <a class="sc-primary" href="#contact">Get in touch</a>
+      <a class="sc-ghost" href="#" id="resumeLink">Download résumé</a>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="hero" id="top">
+      <div class="kicker">Delivery Leadership · Cloud · Enterprise AI</div>
+      <h1>Driving enterprise transformation through <em>cloud, AI &amp; scalable delivery leadership</em>.</h1>
+      <p class="tag">I turn ambitious technology agendas into delivered outcomes — leading global teams that modernize legacy platforms, migrate them to the cloud, and adopt AI responsibly at enterprise scale.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-line" href="#" id="resumeLink2">Download résumé</a>
+      </div>
+    </header>
+    <div class="stats">
+      <div class="s"><div class="num">14+</div><div class="lbl">Years in enterprise delivery &amp; engineering</div></div>
+      <div class="s"><div class="num">6</div><div class="lbl">Cloud-transformation apps delivered</div></div>
+      <div class="s"><div class="num">35</div><div class="lbl">Onshore/offshore team led</div></div>
+      <div class="s"><div class="num">3</div><div class="lbl">Production-grade AI platforms designed &amp; built</div></div>
+    </div>
+
+    <section class="block" id="about">
+      <div class="kicker">About</div>
+      <h2 class="t">About Me</h2>
+      <p class="lead">I scale enterprise delivery and bring order to ambiguity — turning ambitious technology agendas into outcomes that ship on time, at scale, and increasingly powered by AI.</p>
+      <p class="body">Over 14+ years I've grown from hands-on .NET/C# engineer to Service Delivery &amp; Program Manager, leading global onshore/offshore teams and executing multi-million-dollar transformation programs for one of the world's largest consumer-goods enterprises. I don't just manage status — I architect the solution, set the technical bar, and own the outcome.</p>
+      <div class="callout">
+        <div class="ttl">Selected impact</div>
+        <ul>
+          <li>Led delivery of <b>6 cloud-transformation applications</b>, re-architecting a legacy document platform into a cloud-native, load-balanced, fault-tolerant solution on Microsoft Azure (REST APIs, Blob, Functions, App Gateway, DevOps) — with <b>0 critical-severity incidents</b> at cutover.</li>
+          <li>Re-architected enterprise Procure-to-Pay (P2P) and Order-to-Cash (O2C) flows — invoice digitization, indexing, archival, and SAP payment posting across regions — <b>cutting manual processing effort by ~41%</b>.</li>
+          <li>Drove incident reduction, faster time-to-release, and improved CSAT through disciplined Agile delivery, governance, and proactive risk management.</li>
+        </ul>
+      </div>
+      <p class="body"><b>How I lead:</b> clarity beats heroics. I push decisions to the people closest to the work, instrument what matters, and keep executives ahead of risk — never behind it. With 5+ years of onsite U.S. experience, I build trusted relationships with senior leaders, mentor the next generation of talent, and align technology investments with long-term strategy.</p>
+      <p class="body"><b>Why AI, why now:</b> I treat AI as the next scaling layer for the enterprise — and I build, not just talk. I've designed and shipped <b>three production-grade AI platforms</b>: a security-trimmed enterprise RAG copilot, a multi-agent SDLC automation platform with human approval gates, and an invoice-intelligence engine that automates the same P2P domain I run at Fortune-50 scale. Full system design, IaC, CI/CD, and observability included — see <a href="#builds">AI Builds</a>.</p>
+      <p class="body">I'm targeting high-ownership roles — Senior Delivery / Program Manager, Engineering Manager, AI Transformation Lead, and AI/GenAI Solutions Architect — at organizations that operate at scale and bet on builders.</p>
+    </section>
+
+    <section class="block" id="expertise">
+      <div class="kicker">Capabilities</div>
+      <h2 class="t">Core Expertise</h2>
+      <p class="lead">Four intersecting strengths that compound: I deliver, I architect, I design systems for scale, and I bring AI into the enterprise responsibly.</p>
+      <div class="xrow"><div class="xnum">01</div><div><h3>Delivery &amp; Program Leadership</h3><p>End-to-end ownership across onshore/offshore teams — roadmaps, scope, cost, risk, and on-time, high-quality releases that lift CSAT and cut incidents. Agile, SAFe, and waterfall in the same program.</p></div></div>
+      <div class="xrow"><div class="xnum">02</div><div><h3>Cloud Architecture &amp; Modernization</h3><p>Azure migration roadmaps and scalable, fault-tolerant designs (Blob, Functions, App Gateway, DevOps). Modernizing monoliths into REST APIs and event-driven services without halting the business.</p></div></div>
+      <div class="xrow"><div class="xnum">03</div><div><h3>Enterprise System Design</h3><p>Production-grade architecture end to end: microservices and event-driven patterns, hexagonal ports &amp; adapters, Kubernetes (AKS) with Helm, Terraform/Bicep IaC, zero-trust identity, OpenTelemetry observability, and CI/CD with quality gates — designed for failure, audit, and scale.</p></div></div>
+      <div class="xrow"><div class="xnum">04</div><div><h3>Enterprise &amp; GenAI Architecture</h3><p>Applied AI for the enterprise: GenAI adoption, agentic &amp; multi-agent systems, RAG over enterprise documents, and intelligent document processing — grounded in data quality and responsible-AI governance.</p></div></div>
+    </section>
+
+    <section class="block" id="timeline">
+      <div class="kicker">Trajectory</div>
+      <h2 class="t">Career Highlights</h2>
+      <p class="lead">A steady climb from code to leadership, with deepening ownership at every step.</p>
+      <div class="trow"><div class="tyr">2022 — PRESENT</div><div><h4>Service Manager · Cognizant (Client: Fortune 50 Consumer client) — Plano, TX</h4><p>Lead end-to-end delivery of a multi-region cloud-transformation program; architect the Azure-native platform powering P2P/O2C document operations; lead cross-functional onshore/offshore delivery teams.</p></div></div>
+      <div class="trow"><div class="tyr">2021 — 2022</div><div><h4>Service Manager (Offshore) · Cognizant — Chennai, India</h4><p>Owned scope, cost, and execution offshore; replatformed legacy apps into REST services and drove incident reduction, faster releases, and CSAT improvement.</p></div></div>
+      <div class="trow"><div class="tyr">2018 — 2021</div><div><h4>Senior Associate · Cognizant — Plano, TX &amp; Chennai</h4><p>Technical project lead for SAP payment-posting integration and the DMO data-quality platform; built roadmaps and risk plans; mentored engineers on cloud and security.</p></div></div>
+      <div class="trow"><div class="tyr">2014 — 2018</div><div><h4>Associate · Cognizant — Chennai · Monterrey · Plano</h4><p>Modernized application document modules (C#/.NET, REST, AngularJS, FileNet/Centera) and supported the CAS global sales platform; built deployment automation.</p></div></div>
+      <div class="trow"><div class="tyr">2011 — 2014</div><div><h4>Systems / Senior Systems Engineer · Infosys — Chennai</h4><p>Built core modules of the BrandEdge digital-marketing platform (.NET WCF, SharePoint); established the engineering rigor behind today's delivery leadership.</p></div></div>
+    </section>
+
+    <section class="block" id="ai">
+      <div class="kicker">Advisory</div>
+      <h2 class="t">AI Consulting Services</h2>
+      <p class="lead">Helping enterprises move from AI curiosity to AI in production — pragmatically, and where it pays off.</p>
+      <div class="ai-grid">
+        <div class="ai-cell"><h4>AI Strategy &amp; Roadmap</h4><p>Assess where GenAI creates real value, prioritize use cases, and build a phased adoption roadmap with clear ROI and governance.</p></div>
+        <div class="ai-cell"><h4>GenAI Adoption</h4><p>Stand up Azure OpenAI / Copilot solutions, RAG over enterprise documents, and the change management that makes rollouts stick.</p></div>
+        <div class="ai-cell"><h4>Agentic &amp; Multi-Agent Systems</h4><p>Design tool-using agents and orchestration for document triage, invoice processing, and operational workflows — with guardrails and evals.</p></div>
+        <div class="ai-cell"><h4>Enterprise AI &amp; Responsible AI</h4><p>Embed AI into existing platforms with data-quality, security, and governance foundations that hold up in regulated environments.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="builds">
+      <div class="kicker">Proof of work</div>
+      <h2 class="t">AI Engineering Lab</h2>
+      <p class="lead">Three production-grade AI platforms I designed and built end to end — full system design, infrastructure as code, CI/CD, observability, and governance. Not demos: enterprise blueprints that back the AI-transformation claim with working code.</p>
+      <div class="lab-note">Each build answers a question recruiters and CTOs actually ask: <b>can you design an enterprise AI system, govern it like a delivery leader, and ship it to production standards?</b> The answer below is in .NET, Python, Azure, and Kubernetes.</div>
+
+      <div class="case">
+        <h3>Enterprise AI Knowledge Assistant — Security-Trimmed RAG Copilot</h3>
+        <div class="role">System Design · GenAI Architecture · Azure + .NET 8</div>
+        <div class="row"><b>Problem</b><span>Enterprises lose ~$2.5M per 1,000 knowledge workers per year searching information scattered across SharePoint, Confluence, Jira, and ServiceNow — and any AI answer must never leak content the asker isn't authorized to see.</span></div>
+        <div class="row"><b>System design</b><span>An internal Copilot: Next.js chat UI → .NET 8 RAG orchestrator → Azure OpenAI (gpt-4o + embeddings) over Azure AI Search hybrid vector + semantic retrieval, with grounded, inline-cited answers. Entra ID role-based <b>security trimming enforced at both the index and the orchestrator</b>; Cosmos DB conversation memory partitioned per user; Python chunk→embed→index ingestion pipeline.</span></div>
+        <div class="row"><b>Engineering</b><span>Terraform <i>and</i> Bicep IaC, AKS with Helm/Kustomize and HPA, managed identity + Key Vault (zero secrets in code), OpenTelemetry → Application Insights, GitHub Actions CI/CD with OIDC and CodeQL, unit/integration/load tests.</span></div>
+        <div class="row"><b>What it proves</b><span>End-to-end enterprise AI system design: retrieval quality, zero-trust security, observability, and operational scale — the architecture pattern behind every serious enterprise Copilot program.</span></div>
+        <div class="tags"><span>RAG</span><span>Azure OpenAI</span><span>.NET 8</span><span>Azure AI Search</span><span>Cosmos DB</span><span>AKS / Helm</span><span>Terraform + Bicep</span><span>Zero-Trust</span></div>
+        <a class="ghlink" href="https://github.com/ganesht18-sys" target="_blank" rel="noopener">View the build on GitHub →</a>
+      </div>
+
+      <div class="case">
+        <h3>Multi-Agent Software Delivery Platform — Agentic SDLC with Approval Gates</h3>
+        <div class="role">Agentic AI · Delivery Governance · Python + Claude</div>
+        <div class="row"><b>Problem</b><span>Turning requirements into tested, releasable software is slow and inconsistent — and naive agent automation trades speed for control. Enterprises need agentic AI <b>with the governance a delivery leader would demand</b>.</span></div>
+        <div class="row"><b>System design</b><span>A FastAPI control plane orchestrates five collaborating Claude-powered agents — <b>Requirements → Architect → Developer → Tester → Release</b> — as an explicit workflow state machine with <b>human approval gates at every critical hand-off</b>. Agents run in-process for dev or as Azure Service Bus + KEDA-scaled workers in production; outputs include Gherkin stories, ADRs and C4 diagrams, runnable code and tests, and release/rollback runbooks.</span></div>
+        <div class="row"><b>Engineering</b><span>Python 3.11, FastAPI + Pydantic v2, async SQLAlchemy 2 + PostgreSQL with Alembic migrations, OpenTelemetry + Prometheus, Helm/Terraform/Bicep, CI with image scanning — and a fully offline stub mode so the entire pipeline runs deterministically in tests.</span></div>
+        <div class="row"><b>What it proves</b><span>Multi-agent orchestration designed by someone who has governed real SDLC at enterprise scale: traceability, approval gates, and rollback paths — agentic AI you can actually put in front of an audit.</span></div>
+        <div class="tags"><span>Agentic AI</span><span>Multi-Agent Systems</span><span>Claude / Anthropic</span><span>FastAPI</span><span>PostgreSQL</span><span>Service Bus + KEDA</span><span>Approval Gates</span><span>OpenTelemetry</span></div>
+        <a class="ghlink" href="https://github.com/ganesht18-sys" target="_blank" rel="noopener">View the build on GitHub →</a>
+      </div>
+
+      <div class="case">
+        <h3>Invoice Intelligence Platform — AI-Powered Procure-to-Pay Automation</h3>
+        <div class="role">AI Transformation · P2P Domain Depth · Python + Azure AI</div>
+        <div class="row"><b>Problem</b><span>AP teams pay $12–15 per manually processed invoice. The goal: make the happy path touchless (~$2–3 per invoice) without ever sacrificing control or auditability — in the exact P2P domain I run at Fortune-50 scale.</span></div>
+        <div class="row"><b>System design</b><span>Document-in, voucher-out pipeline: ingest → OCR (Azure AI Document Intelligence) → gpt-4o JSON-mode field extraction with confidence scores → deterministic validation with duplicate detection and <b>3-way matching</b> against ERP PO and goods receipt → policy-driven routing (auto-approve ≤ limit for straight-through processing, human gate above it, exception queue for AP analysts) → Dynamics 365 posting. Every transition lands in an <b>append-only audit trail</b>; LLM anomaly review is advisory — deterministic rules stay authoritative.</span></div>
+        <div class="row"><b>Engineering</b><span>FastAPI + Pydantic v2 with hexagonal ports &amp; adapters — identical code path runs fully offline on stubs or live on Azure (zero drift between demo and production). SQLite/PostgreSQL, Service Bus, Key Vault + managed identity, Terraform + Bicep, monitoring dashboards, seeded end-to-end demo journeys.</span></div>
+        <div class="row"><b>What it proves</b><span>AI transformation grounded in deep domain ownership: I've managed enterprise P2P operations for years — this is what it looks like when the person who runs the process designs its AI-automated future.</span></div>
+        <div class="tags"><span>GenAI Extraction</span><span>Azure Document Intelligence</span><span>gpt-4o</span><span>3-Way Match</span><span>Straight-Through Processing</span><span>Dynamics 365</span><span>Audit Trail</span><span>Hexagonal Architecture</span></div>
+        <a class="ghlink" href="https://github.com/ganesht18-sys" target="_blank" rel="noopener">View the build on GitHub →</a>
+      </div>
+    </section>
+
+    <section class="block" id="portfolio">
+      <div class="kicker">Case studies</div>
+      <h2 class="t">Enterprise Delivery Portfolio</h2>
+      <p class="lead">Selected client programs in case-study form: problem, approach, architecture, outcome, business impact.</p>
+
+      <div class="case">
+        <h3>NextGen Digital Imaging — Cloud Transformation</h3>
+        <div class="role">Service Manager · Client: Fortune 50 Consumer client</div>
+        <div class="row"><b>Problem</b><span>A legacy document-imaging platform was hard to scale, with content locked in CAS and fragmented user interfaces for retrieval, workflow, upload, and reporting.</span></div>
+        <div class="row"><b>Approach</b><span>Led a "build once, roll out many" modernization: rewrote the UI in Angular JS, converted gateways into RESTful APIs, and onboarded the platform to Azure with a load-balanced, fault-tolerant design.</span></div>
+        <div class="row"><b>Architecture</b><span>Azure Blob, Azure IIS &amp; Windows Server, Azure Functions, App Gateway, Azure DevOps; C#/.NET REST APIs for metadata extraction, indexing, archival, and SAP payment posting.</span></div>
+        <div class="row"><b>Outcome</b><span>Delivered 6 cloud-transformation applications on time; unified four interfaces into one integrated UI; 0 critical incidents at cutover.</span></div>
+        <div class="row"><b>Business impact</b><span>Secured and accelerated P2P/O2C document operations across regions; reduced manual processing effort by ~41%; improved CSAT and cut recurring incidents by ~13%.</span></div>
+        <div class="tags"><span>Azure</span><span>Cloud Migration</span><span>REST APIs</span><span>P2P / O2C</span><span>SAP Integration</span><span>.NET / C#</span></div>
+      </div>
+
+      <div class="case">
+        <h3>Data Management Organization (DMO) — Data Quality Platform</h3>
+        <div class="role">Senior Associate · Client: Fortune 50 Consumer client</div>
+        <div class="row"><b>Problem</b><span>Data discrepancies across SQL Server, SAP, Teradata, and Informatica threatened the reliability of downstream enterprise reporting.</span></div>
+        <div class="row"><b>Approach</b><span>Built scorecards comparing data across sources by rule-based parameters, with scheduled refreshes and automated discrepancy alerts via email.</span></div>
+        <div class="row"><b>Architecture</b><span>ETL via SSIS &amp; DIH; SQL-based verification, conversion, and audit-sync reports; scheduled jobs for continuous data-quality monitoring.</span></div>
+        <div class="row"><b>Outcome</b><span>Improved data quality by 22%; faster discrepancy detection and resolution across downstream teams.</span></div>
+        <div class="row"><b>Business impact</b><span>More trustworthy reporting and the data-governance foundation now essential for enterprise pipelines.</span></div>
+        <div class="tags"><span>Data Quality</span><span>ETL / SSIS</span><span>SQL</span><span>SAP</span><span>Teradata</span><span>Governance</span></div>
+      </div>
+
+      <div class="case">
+        <h3>Image Vision &amp; CAS — Enterprise Application Delivery</h3>
+        <div class="role">Associate · Client: Fortune 50 Consumer client</div>
+        <div class="row"><b>Problem</b><span>Document storage/workflow/retrieval and a global multi-channel sales platform needed reliable modernization and support.</span></div>
+        <div class="row"><b>Approach</b><span>Developed and modernized modules, built deployment and monitoring automation, and authored functional/technical specs to manage change requests.</span></div>
+        <div class="row"><b>Architecture</b><span>C#/.NET, ASP.NET, REST Web API, AngularJS; IBM FileNet &amp; EMC Centera content repositories; Oracle/SQL Server; CMIS integration.</span></div>
+        <div class="row"><b>Outcome</b><span>Improved application stability and reduced production tickets; enabled reliable multi-region sales operations on a single platform.</span></div>
+        <div class="row"><b>Business impact</b><span>Lower operational overhead and a stronger foundation for the cloud transformation that followed.</span></div>
+        <div class="tags"><span>.NET / C#</span><span>REST</span><span>FileNet</span><span>Automation</span><span>Support</span></div>
+      </div>
+    </section>
+
+    <section class="block" id="philosophy">
+      <div class="kicker">How I work</div>
+      <h2 class="t">Leadership Philosophy</h2>
+      <p class="pull">"<span class="hl">Clarity beats heroics.</span> Align people on outcomes, give teams the context to make good decisions, and remove blockers before they become escalations."</p>
+      <div class="principles">
+        <div><b>Own the outcome, not just the status.</b><p>I architect the solution and set the technical bar — accountability doesn't stop at the standup.</p></div>
+        <div><b>Push decisions to the edge.</b><p>The people closest to the work make the best calls when they have context and trust.</p></div>
+        <div><b>Make the team look brilliant.</b><p>Leadership is a multiplier. I measure myself by what the team ships and becomes.</p></div>
+        <div><b>Keep executives ahead of risk.</b><p>Surface problems early with options — never let a stakeholder be surprised.</p></div>
+      </div>
+    </section>
+
+    <!--<section class="block" id="certs">
+      <div class="kicker">Credentials</div>
+      <h2 class="t">Certifications &amp; Credentials</h2>
+      <p class="lead">Current and in-progress credentials backing delivery, cloud, and AI expertise. (Update as you earn them.)</p>
+      <div class="chips">
+        <div class="chip">B.Tech, Information Technology<small>Jeppiaar Engineering College, 2011</small></div>
+      </div>
+    </section>-->
+
+    <section class="block" id="contact">
+      <div class="kicker" style="color:#7fd1c4">Contact</div>
+      <h2 class="t">Let's build what's next.</h2>
+      <p class="lead">Open to leadership and AI-transformation conversations — Senior Delivery / Program Manager, Engineering &amp; IT Manager, AI Consultant / Manager, and GenAI / AI Solutions Architect roles.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:ganesht_18@yahoo.co.in">ganesht_18@yahoo.co.in</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/ganesh-thangappa-4345249b" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-line" href="https://github.com/ganesht18-sys" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-line" href="#" id="resumeLink3">Résumé</a>
+      </div>
+    </section>
+
+    <footer>© <span id="yr"></span> Ganesh Thangappa · Plano, TX · </footer>
+
+  </main>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Résumé auto-detect:
+  // Upload versioned résumés named  Ganesh_Thangappa_Resume_v1.pdf, _v2.pdf, _v3.pdf, ...
+  // The site automatically links to the HIGHEST version number it can find.
+  // If no versioned file exists, it falls back to "Ganesh-Thangappa-Resume.pdf".
+  (function () {
+    var BASE = 'Ganesh_Thangappa_Resume_v';   // naming convention prefix
+    var MAX_VERSION = 30;                       // highest version number to probe
+    var FALLBACK = 'Ganesh-Thangappa-Resume.pdf';
+
+    function setResume(href) {
+      ['resumeLink', 'resumeLink2', 'resumeLink3'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.setAttribute('href', href);
+          el.setAttribute('target', '_blank');
+          el.setAttribute('rel', 'noopener');
+        }
+      });
+    }
+
+    // Point to the fallback immediately so the button always works,
+    // then upgrade to the latest version once detection completes.
+    setResume(FALLBACK);
+
+    (async function detectLatest() {
+      for (var n = MAX_VERSION; n >= 1; n--) {
+        var url = BASE + n + '.pdf';
+        try {
+          var res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+          if (res.ok) { setResume(url); return; }
+        } catch (e) { /* ignore network/404 and keep probing */ }
+      }
+      // none found -> fallback already set
+    })();
+  })();
+</script>
+</body>
+</html>
